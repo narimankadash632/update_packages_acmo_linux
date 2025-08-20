@@ -1,0 +1,17 @@
+---
+- name: Update specific packages on AlmaLinux servers
+  become: true
+  environment:
+    http_proxy: http://10.128.3.210:8080
+    https_proxy: http://10.128.3.210:8080
+  hosts:
+    - PAZTEC
+  vars:
+    packages_to_update:
+      - tar
+  tasks:
+    - name: Update specific packages to the latest version
+      ansible.builtin.dnf:
+        name: "{{ item }}"
+        state: latest
+      loop: "{{ packages_to_update }}"

@@ -1,0 +1,19 @@
+---
+- name: Update specific packages on AlmaLinux servers
+  become: true
+  environment:
+    http_proxy: http:///10.66.0.71:7070
+    https_proxy: http:///10.66.0.71:7070
+  hosts:
+    - ATC
+    - PC2
+    - GDC
+  vars:
+    packages_to_update:
+      - tar
+  tasks:
+    - name: Update specific packages to the latest version
+      ansible.builtin.dnf:
+        name: "{{ item }}"
+        state: latest
+      loop: "{{ packages_to_update }}"

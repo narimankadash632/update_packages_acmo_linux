@@ -1,0 +1,296 @@
+
+--- 2025-08-20 12:22:04.916698 ---
+Команда: /home/kuat.saparov/ansible/ansible-playbook -i inventory update_packages_test.yml --extra-vars "ansible_sudo_pass=OJ*+t8YRTCn"
+Результат:
+(пусто)
+
+Ошибки:
+bash: line 1: /home/kuat.saparov/ansible/ansible-playbook: No such file or directory
+
+----------------------------------------
+
+--- 2025-08-20 12:24:13.083382 ---
+Команда: /home/kuat.saparov/ansible/ansible-playbook -i inventory update_packages_test.yml --extra-vars "ansible_sudo_pass=OJ*+t8YRTCn"
+Результат:
+(пусто)
+
+Ошибки:
+bash: line 1: /home/kuat.saparov/ansible/ansible-playbook: No such file or directory
+
+----------------------------------------
+
+--- 2025-08-20 12:26:15.976796 ---
+Команда: ansible-playbook -i /home/kuat.saparov/ansible/inventory /home/kuat.saparov/ansible/update_packages_test.yml --extra-vars "ansible_sudo_pass=OJ*+t8YRTCn"
+Результат:
+
+PLAY [Update specific packages on AlmaLinux servers] ***************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [10.32.251.15]
+ok: [10.32.251.14]
+ok: [10.32.251.16]
+ok: [10.32.251.17]
+ok: [10.32.251.13]
+ok: [10.32.251.25]
+ok: [10.32.251.11]
+ok: [10.32.251.29]
+ok: [10.32.251.30]
+ok: [10.32.251.28]
+ok: [10.32.251.31]
+ok: [10.32.251.33]
+ok: [10.32.251.18]
+ok: [10.32.251.19]
+ok: [10.32.251.20]
+
+TASK [Update specific packages to the latest version] **************************
+changed: [10.32.251.15] => (item=tar)
+changed: [10.32.251.13] => (item=tar)
+changed: [10.32.251.14] => (item=tar)
+changed: [10.32.251.16] => (item=tar)
+changed: [10.32.251.17] => (item=tar)
+ok: [10.32.251.19] => (item=tar)
+failed: [10.32.251.20] (item=tar) => {"ansible_loop_var": "item", "changed": false, "item": "tar", "msg": "Failed to download metadata for repo 'google-chrome': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
+changed: [10.32.251.18] => (item=tar)
+failed: [10.32.251.25] (item=tar) => {"ansible_loop_var": "item", "changed": false, "item": "tar", "msg": "Failed to download metadata for repo 'epel': GPG verification is enabled, but GPG signature is not available. This may be an error or the repository does not support GPG verification: Status code: 404 for http://mirror.ps.kz/epel/9/Everything/x86_64/repodata/repomd.xml.asc (IP: 10.32.254.136)", "rc": 1, "results": []}
+failed: [10.32.251.11] (item=tar) => {"ansible_loop_var": "item", "changed": false, "item": "tar", "msg": "Failed to download metadata for repo 'epel': GPG verification is enabled, but GPG signature is not available. This may be an error or the repository does not support GPG verification: Status code: 404 for http://mirror.ps.kz/epel/9/Everything/x86_64/repodata/repomd.xml.asc (IP: 10.32.254.136)", "rc": 1, "results": []}
+failed: [10.32.251.29] (item=tar) => {"ansible_loop_var": "item", "changed": false, "item": "tar", "msg": "Failed to download metadata for repo 'epel': GPG verification is enabled, but GPG signature is not available. This may be an error or the repository does not support GPG verification: Status code: 404 for http://mirror.ps.kz/epel/9/Everything/x86_64/repodata/repomd.xml.asc (IP: 10.32.254.136)", "rc": 1, "results": []}
+failed: [10.32.251.28] (item=tar) => {"ansible_loop_var": "item", "changed": false, "item": "tar", "msg": "Failed to download metadata for repo 'epel': GPG verification is enabled, but GPG signature is not available. This may be an error or the repository does not support GPG verification: Status code: 404 for http://mirror.ps.kz/epel/9/Everything/x86_64/repodata/repomd.xml.asc (IP: 10.32.254.136)", "rc": 1, "results": []}
+failed: [10.32.251.31] (item=tar) => {"ansible_loop_var": "item", "changed": false, "item": "tar", "msg": "Failed to download metadata for repo 'epel': GPG verification is enabled, but GPG signature is not available. This may be an error or the repository does not support GPG verification: Status code: 404 for http://mirror.ps.kz/epel/9/Everything/x86_64/repodata/repomd.xml.asc (IP: 10.32.254.136)", "rc": 1, "results": []}
+failed: [10.32.251.30] (item=tar) => {"ansible_loop_var": "item", "changed": false, "item": "tar", "msg": "Failed to download metadata for repo 'epel': GPG verification is enabled, but GPG signature is not available. This may be an error or the repository does not support GPG verification: Status code: 404 for http://mirror.ps.kz/epel/9/Everything/x86_64/repodata/repomd.xml.asc (IP: 10.32.254.136)", "rc": 1, "results": []}
+failed: [10.32.251.33] (item=tar) => {"ansible_loop_var": "item", "changed": false, "item": "tar", "msg": "Failed to download metadata for repo 'epel': GPG verification is enabled, but GPG signature is not available. This may be an error or the repository does not support GPG verification: Status code: 404 for http://mirror.ps.kz/epel/9/Everything/x86_64/repodata/repomd.xml.asc (IP: 10.32.254.136)", "rc": 1, "results": []}
+
+PLAY RECAP *********************************************************************
+10.32.251.11               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.13               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.14               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.15               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.16               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.17               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.18               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.19               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.20               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.25               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.28               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.29               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.30               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.31               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.33               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+----------------------------------------
+
+--- 2025-08-20 14:41:23.063788 ---
+Команда: ansible-playbook -i /home/kuat.saparov/ansible/hosts /home/kuat.saparov/ansible/update_packages_test_akt.yml --extra-vars "ansible_sudo_pass={ansible_pass}"
+Результат:
+
+PLAY [Update specific packages on AlmaLinux servers] ***************************
+
+TASK [Gathering Facts] *********************************************************
+fatal: [10.67.29.75]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.74]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.70]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.73]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.71]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.76]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.90]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.81]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.83]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.87]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.104]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.88]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.89]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.103]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.105]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.109]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.80]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.110]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.108]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.91]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.86]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.79]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.85]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.84]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.111]: FAILED! => {"msg": "Incorrect sudo password"}
+
+PLAY RECAP *********************************************************************
+10.67.29.103               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.104               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.105               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.108               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.109               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.110               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.111               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.70                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.71                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.73                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.74                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.75                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.76                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.79                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.80                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.81                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.83                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.84                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.85                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.86                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.87                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.88                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.89                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.90                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.91                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+----------------------------------------
+
+--- 2025-08-20 14:54:31.910211 ---
+Команда: ansible-playbook -i /home/kuat.saparov/ansible/hosts /home/kuat.saparov/ansible/update_packages_test_akt.yml --extra-vars "ansible_sudo_pass={ansible_pass}"
+Результат:
+
+PLAY [Update specific packages on AlmaLinux servers] ***************************
+
+TASK [Gathering Facts] *********************************************************
+fatal: [10.67.29.71]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.73]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.70]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.74]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.75]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.76]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.87]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.90]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.83]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.81]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.88]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.104]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.103]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.105]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.89]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.108]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.80]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.110]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.109]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.91]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.86]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.79]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.85]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.84]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.67.29.111]: FAILED! => {"msg": "Incorrect sudo password"}
+
+PLAY RECAP *********************************************************************
+10.67.29.103               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.104               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.105               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.108               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.109               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.110               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.111               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.70                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.71                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.73                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.74                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.75                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.76                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.79                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.80                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.81                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.83                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.84                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.85                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.86                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.87                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.88                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.89                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.90                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.67.29.91                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+----------------------------------------
+
+--- 2025-08-20 15:09:26.546686 ---
+Команда: ansible-playbook -i /home/kuat.saparov/ansible/hosts /home/kuat.saparov/ansible/update_packages_test_akt.yml --extra-vars 'ansible_sudo_pass=OJ*+t8YRTCn'
+Результат:
+
+PLAY [Update specific packages on AlmaLinux servers] ***************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [10.67.29.74]
+ok: [10.67.29.70]
+ok: [10.67.29.71]
+ok: [10.67.29.75]
+ok: [10.67.29.76]
+ok: [10.67.29.73]
+ok: [10.67.29.81]
+ok: [10.67.29.90]
+ok: [10.67.29.83]
+ok: [10.67.29.87]
+ok: [10.67.29.88]
+ok: [10.67.29.89]
+ok: [10.67.29.104]
+ok: [10.67.29.103]
+ok: [10.67.29.105]
+ok: [10.67.29.108]
+ok: [10.67.29.91]
+ok: [10.67.29.86]
+ok: [10.67.29.85]
+ok: [10.67.29.84]
+ok: [10.67.29.79]
+ok: [10.67.29.111]
+ok: [10.67.29.109]
+ok: [10.67.29.110]
+ok: [10.67.29.80]
+
+TASK [Update specific packages to the latest version] **************************
+ok: [10.67.29.75] => (item=tar)
+ok: [10.67.29.70] => (item=tar)
+ok: [10.67.29.71] => (item=tar)
+ok: [10.67.29.74] => (item=tar)
+ok: [10.67.29.73] => (item=tar)
+ok: [10.67.29.81] => (item=tar)
+ok: [10.67.29.83] => (item=tar)
+ok: [10.67.29.76] => (item=tar)
+ok: [10.67.29.87] => (item=tar)
+ok: [10.67.29.90] => (item=tar)
+ok: [10.67.29.104] => (item=tar)
+ok: [10.67.29.103] => (item=tar)
+ok: [10.67.29.89] => (item=tar)
+ok: [10.67.29.105] => (item=tar)
+ok: [10.67.29.88] => (item=tar)
+ok: [10.67.29.80] => (item=tar)
+ok: [10.67.29.109] => (item=tar)
+ok: [10.67.29.110] => (item=tar)
+ok: [10.67.29.108] => (item=tar)
+ok: [10.67.29.91] => (item=tar)
+ok: [10.67.29.86] => (item=tar)
+ok: [10.67.29.79] => (item=tar)
+ok: [10.67.29.85] => (item=tar)
+ok: [10.67.29.84] => (item=tar)
+ok: [10.67.29.111] => (item=tar)
+
+PLAY RECAP *********************************************************************
+10.67.29.103               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.67.29.104               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.67.29.105               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.67.29.108               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.67.29.109               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.67.29.110               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.67.29.111               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.67.29.70                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.67.29.71                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.67.29.73                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.67.29.74                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.67.29.75                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.67.29.76                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.67.29.79                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.67.29.80                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.67.29.81                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.67.29.83                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.67.29.84                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.67.29.85                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.67.29.86                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.67.29.87                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.67.29.88                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.67.29.89                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.67.29.90                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.67.29.91                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+----------------------------------------

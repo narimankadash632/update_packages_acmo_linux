@@ -1,0 +1,232 @@
+
+--- 2025-08-20 15:11:00.252747 ---
+Команда: ansible-playbook -i /home/kuat.saparov/ansible/hosts /home/kuat.saparov/ansible/update_packages_test_dgok.yml --extra-vars 'ansible_sudo_pass=OJ*+t8YRTCn'
+Результат:
+(пусто)
+
+Ошибки:
+ERROR! the playbook: /home/kuat.saparov/ansible/update_packages_test_dgok.yml could not be found
+
+----------------------------------------
+
+--- 2025-08-20 15:41:56.227978 ---
+Команда: ansible-playbook -i /home/kuat.saparov/ansible/hosts /home/kuat.saparov/ansible/update_packages_test_dgok.yml --extra-vars 'ansible_sudo_pass=OJ*+t8YRTCn'
+Результат:
+
+PLAY [Update specific packages on AlmaLinux servers] ***************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [10.65.42.14]
+ok: [10.65.42.13]
+ok: [10.65.42.11]
+ok: [10.65.42.12]
+ok: [10.65.42.10]
+ok: [10.65.42.25]
+ok: [10.65.42.16]
+ok: [10.65.42.17]
+ok: [10.65.42.20]
+ok: [10.65.42.18]
+ok: [10.65.42.22]
+ok: [10.65.42.23]
+ok: [10.65.42.26]
+ok: [10.65.42.21]
+ok: [10.65.42.27]
+ok: [10.65.42.28]
+ok: [10.65.42.30]
+ok: [10.65.42.31]
+ok: [10.65.42.24]
+ok: [10.65.42.32]
+ok: [10.65.42.142]
+ok: [10.65.42.145]
+ok: [10.65.42.144]
+ok: [10.65.42.146]
+ok: [10.65.42.57]
+ok: [10.65.42.15]
+ok: [10.65.42.33]
+ok: [10.65.42.34]
+ok: [10.65.42.35]
+ok: [10.65.42.29]
+ok: [10.65.42.149]
+ok: [10.65.42.45]
+ok: [10.65.42.19]
+ok: [10.65.42.158]
+ok: [10.65.42.151]
+ok: [10.65.42.153]
+ok: [10.65.42.46]
+ok: [10.65.42.156]
+ok: [10.65.42.43]
+ok: [10.65.42.157]
+ok: [10.65.42.44]
+ok: [10.65.42.41]
+ok: [10.65.42.155]
+ok: [10.65.42.154]
+ok: [10.65.42.42]
+ok: [10.65.42.52]
+ok: [10.65.42.162]
+ok: [10.65.42.47]
+ok: [10.65.42.163]
+ok: [10.65.42.48]
+ok: [10.65.42.49]
+ok: [10.65.42.165]
+ok: [10.65.42.50]
+ok: [10.65.42.159]
+ok: [10.65.42.166]
+ok: [10.65.42.168]
+ok: [10.65.42.169]
+ok: [10.65.42.167]
+ok: [10.65.42.56]
+ok: [10.65.42.58]
+ok: [10.65.42.170]
+ok: [10.65.42.59]
+ok: [10.65.42.173]
+ok: [10.65.42.172]
+ok: [10.65.42.61]
+ok: [10.65.42.62]
+ok: [10.65.42.160]
+ok: [10.65.42.161]
+ok: [10.65.42.55]
+
+TASK [Update specific packages to the latest version] **************************
+changed: [10.65.42.10] => (item=tar)
+changed: [10.65.42.12] => (item=tar)
+changed: [10.65.42.14] => (item=tar)
+changed: [10.65.42.13] => (item=tar)
+changed: [10.65.42.11] => (item=tar)
+changed: [10.65.42.25] => (item=tar)
+changed: [10.65.42.16] => (item=tar)
+changed: [10.65.42.18] => (item=tar)
+changed: [10.65.42.20] => (item=tar)
+changed: [10.65.42.17] => (item=tar)
+changed: [10.65.42.26] => (item=tar)
+changed: [10.65.42.21] => (item=tar)
+changed: [10.65.42.27] => (item=tar)
+changed: [10.65.42.22] => (item=tar)
+changed: [10.65.42.23] => (item=tar)
+changed: [10.65.42.30] => (item=tar)
+changed: [10.65.42.28] => (item=tar)
+changed: [10.65.42.24] => (item=tar)
+changed: [10.65.42.31] => (item=tar)
+changed: [10.65.42.32] => (item=tar)
+changed: [10.65.42.142] => (item=tar)
+changed: [10.65.42.145] => (item=tar)
+changed: [10.65.42.144] => (item=tar)
+changed: [10.65.42.146] => (item=tar)
+changed: [10.65.42.33] => (item=tar)
+ok: [10.65.42.34] => (item=tar)
+changed: [10.65.42.35] => (item=tar)
+ok: [10.65.42.57] => (item=tar)
+changed: [10.65.42.29] => (item=tar)
+changed: [10.65.42.149] => (item=tar)
+changed: [10.65.42.19] => (item=tar)
+changed: [10.65.42.151] => (item=tar)
+changed: [10.65.42.153] => (item=tar)
+changed: [10.65.42.158] => (item=tar)
+ok: [10.65.42.45] => (item=tar)
+changed: [10.65.42.46] => (item=tar)
+changed: [10.65.42.156] => (item=tar)
+changed: [10.65.42.157] => (item=tar)
+changed: [10.65.42.43] => (item=tar)
+changed: [10.65.42.44] => (item=tar)
+changed: [10.65.42.41] => (item=tar)
+changed: [10.65.42.155] => (item=tar)
+changed: [10.65.42.154] => (item=tar)
+changed: [10.65.42.42] => (item=tar)
+changed: [10.65.42.52] => (item=tar)
+changed: [10.65.42.162] => (item=tar)
+changed: [10.65.42.47] => (item=tar)
+changed: [10.65.42.163] => (item=tar)
+changed: [10.65.42.48] => (item=tar)
+changed: [10.65.42.49] => (item=tar)
+changed: [10.65.42.159] => (item=tar)
+changed: [10.65.42.50] => (item=tar)
+changed: [10.65.42.160] => (item=tar)
+ok: [10.65.42.166] => (item=tar)
+ok: [10.65.42.165] => (item=tar)
+ok: [10.65.42.167] => (item=tar)
+changed: [10.65.42.15] => (item=tar)
+ok: [10.65.42.168] => (item=tar)
+ok: [10.65.42.169] => (item=tar)
+ok: [10.65.42.55] => (item=tar)
+ok: [10.65.42.56] => (item=tar)
+ok: [10.65.42.59] => (item=tar)
+ok: [10.65.42.58] => (item=tar)
+ok: [10.65.42.170] => (item=tar)
+ok: [10.65.42.172] => (item=tar)
+ok: [10.65.42.173] => (item=tar)
+ok: [10.65.42.61] => (item=tar)
+ok: [10.65.42.62] => (item=tar)
+changed: [10.65.42.161] => (item=tar)
+
+PLAY RECAP *********************************************************************
+10.65.42.10                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.11                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.12                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.13                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.14                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.142               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.144               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.145               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.146               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.149               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.15                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.151               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.153               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.154               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.155               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.156               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.157               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.158               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.159               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.16                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.160               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.161               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.162               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.163               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.165               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.166               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.167               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.168               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.169               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.17                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.170               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.172               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.173               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.18                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.19                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.20                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.21                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.22                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.23                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.24                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.25                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.26                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.27                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.28                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.29                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.30                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.31                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.32                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.33                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.34                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.35                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.41                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.42                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.43                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.44                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.45                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.46                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.47                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.48                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.49                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.50                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.52                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.55                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.56                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.57                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.58                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.59                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.61                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.65.42.62                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+----------------------------------------

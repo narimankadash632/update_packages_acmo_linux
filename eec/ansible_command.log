@@ -1,0 +1,24 @@
+
+--- 2025-08-20 15:43:41.574702 ---
+Команда: ansible-playbook -i /home/kuat.saparov/ansible/inventory /home/kuat.saparov/ansible/update_packages_test_eec.yml --extra-vars 'ansible_sudo_pass=OJ*+t8YRTCn'
+Результат:
+
+PLAY [Update specific packages on AlmaLinux servers] ***************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [10.128.104.129]
+ok: [10.128.104.130]
+ok: [10.128.104.131]
+
+TASK [Update specific packages to the latest version] **************************
+ok: [10.128.104.129] => (item=tar)
+ok: [10.128.104.131] => (item=tar)
+ok: [10.128.104.130] => (item=tar)
+
+PLAY RECAP *********************************************************************
+10.128.104.129             : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.128.104.130             : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.128.104.131             : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+----------------------------------------

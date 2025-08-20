@@ -1,0 +1,236 @@
+
+--- 2025-08-20 12:22:04.916698 ---
+Команда: /home/kuat.saparov/ansible/ansible-playbook -i inventory update_packages_test.yml --extra-vars "ansible_sudo_pass=OJ*+t8YRTCn"
+Результат:
+(пусто)
+
+Ошибки:
+bash: line 1: /home/kuat.saparov/ansible/ansible-playbook: No such file or directory
+
+----------------------------------------
+
+--- 2025-08-20 12:24:13.083382 ---
+Команда: /home/kuat.saparov/ansible/ansible-playbook -i inventory update_packages_test.yml --extra-vars "ansible_sudo_pass=OJ*+t8YRTCn"
+Результат:
+(пусто)
+
+Ошибки:
+bash: line 1: /home/kuat.saparov/ansible/ansible-playbook: No such file or directory
+
+----------------------------------------
+
+--- 2025-08-20 12:26:15.976796 ---
+Команда: ansible-playbook -i /home/kuat.saparov/ansible/inventory /home/kuat.saparov/ansible/update_packages_test.yml --extra-vars "ansible_sudo_pass=OJ*+t8YRTCn"
+Результат:
+
+PLAY [Update specific packages on AlmaLinux servers] ***************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [10.32.251.15]
+ok: [10.32.251.14]
+ok: [10.32.251.16]
+ok: [10.32.251.17]
+ok: [10.32.251.13]
+ok: [10.32.251.25]
+ok: [10.32.251.11]
+ok: [10.32.251.29]
+ok: [10.32.251.30]
+ok: [10.32.251.28]
+ok: [10.32.251.31]
+ok: [10.32.251.33]
+ok: [10.32.251.18]
+ok: [10.32.251.19]
+ok: [10.32.251.20]
+
+TASK [Update specific packages to the latest version] **************************
+changed: [10.32.251.15] => (item=tar)
+changed: [10.32.251.13] => (item=tar)
+changed: [10.32.251.14] => (item=tar)
+changed: [10.32.251.16] => (item=tar)
+changed: [10.32.251.17] => (item=tar)
+ok: [10.32.251.19] => (item=tar)
+failed: [10.32.251.20] (item=tar) => {"ansible_loop_var": "item", "changed": false, "item": "tar", "msg": "Failed to download metadata for repo 'google-chrome': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
+changed: [10.32.251.18] => (item=tar)
+failed: [10.32.251.25] (item=tar) => {"ansible_loop_var": "item", "changed": false, "item": "tar", "msg": "Failed to download metadata for repo 'epel': GPG verification is enabled, but GPG signature is not available. This may be an error or the repository does not support GPG verification: Status code: 404 for http://mirror.ps.kz/epel/9/Everything/x86_64/repodata/repomd.xml.asc (IP: 10.32.254.136)", "rc": 1, "results": []}
+failed: [10.32.251.11] (item=tar) => {"ansible_loop_var": "item", "changed": false, "item": "tar", "msg": "Failed to download metadata for repo 'epel': GPG verification is enabled, but GPG signature is not available. This may be an error or the repository does not support GPG verification: Status code: 404 for http://mirror.ps.kz/epel/9/Everything/x86_64/repodata/repomd.xml.asc (IP: 10.32.254.136)", "rc": 1, "results": []}
+failed: [10.32.251.29] (item=tar) => {"ansible_loop_var": "item", "changed": false, "item": "tar", "msg": "Failed to download metadata for repo 'epel': GPG verification is enabled, but GPG signature is not available. This may be an error or the repository does not support GPG verification: Status code: 404 for http://mirror.ps.kz/epel/9/Everything/x86_64/repodata/repomd.xml.asc (IP: 10.32.254.136)", "rc": 1, "results": []}
+failed: [10.32.251.28] (item=tar) => {"ansible_loop_var": "item", "changed": false, "item": "tar", "msg": "Failed to download metadata for repo 'epel': GPG verification is enabled, but GPG signature is not available. This may be an error or the repository does not support GPG verification: Status code: 404 for http://mirror.ps.kz/epel/9/Everything/x86_64/repodata/repomd.xml.asc (IP: 10.32.254.136)", "rc": 1, "results": []}
+failed: [10.32.251.31] (item=tar) => {"ansible_loop_var": "item", "changed": false, "item": "tar", "msg": "Failed to download metadata for repo 'epel': GPG verification is enabled, but GPG signature is not available. This may be an error or the repository does not support GPG verification: Status code: 404 for http://mirror.ps.kz/epel/9/Everything/x86_64/repodata/repomd.xml.asc (IP: 10.32.254.136)", "rc": 1, "results": []}
+failed: [10.32.251.30] (item=tar) => {"ansible_loop_var": "item", "changed": false, "item": "tar", "msg": "Failed to download metadata for repo 'epel': GPG verification is enabled, but GPG signature is not available. This may be an error or the repository does not support GPG verification: Status code: 404 for http://mirror.ps.kz/epel/9/Everything/x86_64/repodata/repomd.xml.asc (IP: 10.32.254.136)", "rc": 1, "results": []}
+failed: [10.32.251.33] (item=tar) => {"ansible_loop_var": "item", "changed": false, "item": "tar", "msg": "Failed to download metadata for repo 'epel': GPG verification is enabled, but GPG signature is not available. This may be an error or the repository does not support GPG verification: Status code: 404 for http://mirror.ps.kz/epel/9/Everything/x86_64/repodata/repomd.xml.asc (IP: 10.32.254.136)", "rc": 1, "results": []}
+
+PLAY RECAP *********************************************************************
+10.32.251.11               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.13               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.14               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.15               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.16               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.17               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.18               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.19               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.20               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.25               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.28               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.29               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.30               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.31               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.33               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+----------------------------------------
+
+--- 2025-08-20 14:57:46.504071 ---
+Команда: ansible-playbook -i /home/kuat.saparov/ansible/inventory /home/kuat.saparov/ansible/update_packages_test_ssg.yml --extra-vars "ansible_sudo_pass={ansible_pass}"
+Результат:
+(пусто)
+
+Ошибки:
+ERROR! the playbook: /home/kuat.saparov/ansible/update_packages_test_ssg.yml could not be found
+
+----------------------------------------
+
+--- 2025-08-20 14:58:28.502595 ---
+Команда: ansible-playbook -i /home/kuat.saparov/ansible/inventory /home/kuat.saparov/ansible/update_packages_test_ssg.yml --extra-vars "ansible_sudo_pass={ansible_pass}"
+Результат:
+
+PLAY [Update specific packages on AlmaLinux servers] ***************************
+
+TASK [Gathering Facts] *********************************************************
+fatal: [10.32.251.14]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.17]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.16]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.15]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.13]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.25]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.20]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.18]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.19]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.11]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.33]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.31]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.30]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.29]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.28]: FAILED! => {"msg": "Incorrect sudo password"}
+
+PLAY RECAP *********************************************************************
+10.32.251.11               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.13               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.14               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.15               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.16               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.17               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.18               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.19               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.20               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.25               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.28               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.29               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.30               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.31               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.33               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+----------------------------------------
+
+--- 2025-08-20 15:01:11.996766 ---
+Команда: ansible-playbook -i /home/kuat.saparov/ansible/inventory /home/kuat.saparov/ansible/update_packages_test_ssg.yml --extra-vars 'ansible_sudo_pass={ansible_pass}'
+Результат:
+
+PLAY [Update specific packages on AlmaLinux servers] ***************************
+
+TASK [Gathering Facts] *********************************************************
+fatal: [10.32.251.14]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.16]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.17]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.15]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.13]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.11]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.25]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.20]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.18]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.19]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.28]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.29]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.31]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.33]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.32.251.30]: FAILED! => {"msg": "Incorrect sudo password"}
+
+PLAY RECAP *********************************************************************
+10.32.251.11               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.13               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.14               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.15               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.16               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.17               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.18               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.19               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.20               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.25               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.28               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.29               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.30               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.31               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.33               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+----------------------------------------
+
+--- 2025-08-20 15:04:00.669525 ---
+Команда: ansible-playbook -i /home/kuat.saparov/ansible/inventory /home/kuat.saparov/ansible/update_packages_test_ssg.yml --extra-vars 'ansible_sudo_pass=OJ*+t8YRTCn'
+Результат:
+
+PLAY [Update specific packages on AlmaLinux servers] ***************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [10.32.251.17]
+ok: [10.32.251.13]
+ok: [10.32.251.16]
+ok: [10.32.251.14]
+ok: [10.32.251.15]
+ok: [10.32.251.11]
+ok: [10.32.251.28]
+ok: [10.32.251.25]
+ok: [10.32.251.29]
+ok: [10.32.251.30]
+ok: [10.32.251.31]
+ok: [10.32.251.33]
+ok: [10.32.251.18]
+ok: [10.32.251.19]
+ok: [10.32.251.20]
+
+TASK [Update specific packages to the latest version] **************************
+ok: [10.32.251.16] => (item=tar)
+ok: [10.32.251.14] => (item=tar)
+ok: [10.32.251.13] => (item=tar)
+ok: [10.32.251.17] => (item=tar)
+ok: [10.32.251.15] => (item=tar)
+ok: [10.32.251.18] => (item=tar)
+failed: [10.32.251.20] (item=tar) => {"ansible_loop_var": "item", "changed": false, "item": "tar", "msg": "Failed to download metadata for repo 'google-chrome': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
+ok: [10.32.251.19] => (item=tar)
+failed: [10.32.251.11] (item=tar) => {"ansible_loop_var": "item", "changed": false, "item": "tar", "msg": "Failed to download metadata for repo 'epel': GPG verification is enabled, but GPG signature is not available. This may be an error or the repository does not support GPG verification: Status code: 404 for http://mirror.ps.kz/epel/9/Everything/x86_64/repodata/repomd.xml.asc (IP: 10.32.254.136)", "rc": 1, "results": []}
+failed: [10.32.251.25] (item=tar) => {"ansible_loop_var": "item", "changed": false, "item": "tar", "msg": "Failed to download metadata for repo 'epel': GPG verification is enabled, but GPG signature is not available. This may be an error or the repository does not support GPG verification: Status code: 404 for http://mirror.ps.kz/epel/9/Everything/x86_64/repodata/repomd.xml.asc (IP: 10.32.254.136)", "rc": 1, "results": []}
+failed: [10.32.251.28] (item=tar) => {"ansible_loop_var": "item", "changed": false, "item": "tar", "msg": "Failed to download metadata for repo 'epel': GPG verification is enabled, but GPG signature is not available. This may be an error or the repository does not support GPG verification: Status code: 404 for http://mirror.ps.kz/epel/9/Everything/x86_64/repodata/repomd.xml.asc (IP: 10.32.254.136)", "rc": 1, "results": []}
+failed: [10.32.251.29] (item=tar) => {"ansible_loop_var": "item", "changed": false, "item": "tar", "msg": "Failed to download metadata for repo 'epel': GPG verification is enabled, but GPG signature is not available. This may be an error or the repository does not support GPG verification: Status code: 404 for http://mirror.ps.kz/epel/9/Everything/x86_64/repodata/repomd.xml.asc (IP: 10.32.254.136)", "rc": 1, "results": []}
+failed: [10.32.251.30] (item=tar) => {"ansible_loop_var": "item", "changed": false, "item": "tar", "msg": "Failed to download metadata for repo 'epel': GPG verification is enabled, but GPG signature is not available. This may be an error or the repository does not support GPG verification: Status code: 404 for http://mirror.ps.kz/epel/9/Everything/x86_64/repodata/repomd.xml.asc (IP: 10.32.254.136)", "rc": 1, "results": []}
+failed: [10.32.251.31] (item=tar) => {"ansible_loop_var": "item", "changed": false, "item": "tar", "msg": "Failed to download metadata for repo 'epel': GPG verification is enabled, but GPG signature is not available. This may be an error or the repository does not support GPG verification: Status code: 404 for http://mirror.ps.kz/epel/9/Everything/x86_64/repodata/repomd.xml.asc (IP: 10.32.254.136)", "rc": 1, "results": []}
+failed: [10.32.251.33] (item=tar) => {"ansible_loop_var": "item", "changed": false, "item": "tar", "msg": "Failed to download metadata for repo 'epel': GPG verification is enabled, but GPG signature is not available. This may be an error or the repository does not support GPG verification: Status code: 404 for http://mirror.ps.kz/epel/9/Everything/x86_64/repodata/repomd.xml.asc (IP: 10.32.254.136)", "rc": 1, "results": []}
+
+PLAY RECAP *********************************************************************
+10.32.251.11               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.13               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.14               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.15               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.16               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.17               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.18               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.19               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.20               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.25               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.28               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.29               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.30               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.31               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.32.251.33               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+----------------------------------------
