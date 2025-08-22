@@ -1,0 +1,123 @@
+
+--- 2025-08-21 16:35:23.124893 ---
+Команда: ansible-playbook -i /home/kuat.saparov/ansible/hosts /home/kuat.saparov/ansible/update_packages_test_aks.yml --extra-vars "ansible_sudo_pass={ansible_pass}"
+Результат:
+
+PLAY [Update specific packages on AlmaLinux servers] ***************************
+
+TASK [Gathering Facts] *********************************************************
+fatal: [10.66.93.3]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.66.93.6]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.66.93.4]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.66.93.7]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.66.93.5]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.66.93.8]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.66.93.9]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.66.93.10]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.66.93.12]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.66.93.11]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.66.93.13]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.66.93.17]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.66.93.14]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.66.93.15]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.66.93.16]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.66.93.191]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.66.93.130]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.66.93.132]: FAILED! => {"msg": "Incorrect sudo password"}
+fatal: [10.66.93.133]: FAILED! => {"msg": "Incorrect sudo password"}
+
+PLAY RECAP *********************************************************************
+10.66.93.10                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.66.93.11                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.66.93.12                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.66.93.13                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.66.93.130               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.66.93.132               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.66.93.133               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.66.93.14                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.66.93.15                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.66.93.16                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.66.93.17                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.66.93.191               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.66.93.3                 : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.66.93.4                 : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.66.93.5                 : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.66.93.6                 : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.66.93.7                 : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.66.93.8                 : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+10.66.93.9                 : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+
+----------------------------------------
+
+--- 2025-08-21 16:46:13.651645 ---
+Команда: ansible-playbook -i /home/kuat.saparov/ansible/hosts /home/kuat.saparov/ansible/update_packages_test_aks.yml --extra-vars 'ansible_sudo_pass=OJ*+t8YRTCn'
+Результат:
+
+PLAY [Update specific packages on AlmaLinux servers] ***************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [10.66.93.6]
+ok: [10.66.93.5]
+ok: [10.66.93.3]
+ok: [10.66.93.4]
+ok: [10.66.93.7]
+ok: [10.66.93.10]
+ok: [10.66.93.12]
+ok: [10.66.93.9]
+ok: [10.66.93.13]
+ok: [10.66.93.8]
+ok: [10.66.93.11]
+ok: [10.66.93.15]
+ok: [10.66.93.14]
+ok: [10.66.93.132]
+ok: [10.66.93.130]
+ok: [10.66.93.133]
+ok: [10.66.93.17]
+ok: [10.66.93.16]
+ok: [10.66.93.191]
+
+TASK [Update specific packages to the latest version] **************************
+changed: [10.66.93.3] => (item=kernel)
+changed: [10.66.93.5] => (item=kernel)
+changed: [10.66.93.6] => (item=kernel)
+changed: [10.66.93.7] => (item=kernel)
+changed: [10.66.93.4] => (item=kernel)
+changed: [10.66.93.8] => (item=kernel)
+changed: [10.66.93.10] => (item=kernel)
+changed: [10.66.93.12] => (item=kernel)
+changed: [10.66.93.11] => (item=kernel)
+changed: [10.66.93.13] => (item=kernel)
+changed: [10.66.93.14] => (item=kernel)
+changed: [10.66.93.9] => (item=kernel)
+changed: [10.66.93.15] => (item=kernel)
+changed: [10.66.93.17] => (item=kernel)
+changed: [10.66.93.16] => (item=kernel)
+changed: [10.66.93.132] => (item=kernel)
+changed: [10.66.93.130] => (item=kernel)
+changed: [10.66.93.133] => (item=kernel)
+changed: [10.66.93.191] => (item=kernel)
+
+PLAY RECAP *********************************************************************
+10.66.93.10                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.66.93.11                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.66.93.12                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.66.93.13                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.66.93.130               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.66.93.132               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.66.93.133               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.66.93.14                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.66.93.15                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.66.93.16                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.66.93.17                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.66.93.191               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.66.93.3                 : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.66.93.4                 : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.66.93.5                 : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.66.93.6                 : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.66.93.7                 : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.66.93.8                 : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+10.66.93.9                 : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+----------------------------------------

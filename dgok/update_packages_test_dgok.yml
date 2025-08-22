@@ -18,7 +18,7 @@
     - DOF1
   vars:
     packages_to_update:
-      - tar
+      - kernel
   tasks:
     - name: Update specific packages to the latest version
       ansible.builtin.dnf:

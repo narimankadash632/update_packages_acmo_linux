@@ -13,7 +13,7 @@ password = os.getenv("SSH_PASS")
 ansible_pass = os.getenv("ANSIBLE_PASS")
 
 # команда для выполнения (пример: ansible-playbook)
-command = 'ansible-playbook -i /home/kuat.saparov/ansible/hosts /home/kuat.saparov/ansible/update_packages_test_aks.yml --extra-vars "ansible_sudo_pass={ansible_pass}"'
+command = f"ansible-playbook -i /home/kuat.saparov/ansible/hosts /home/kuat.saparov/ansible/update_packages_test_aks.yml --extra-vars 'ansible_sudo_pass={ansible_pass}'"
 
 # локальный лог-файл
 log_file = "ansible_command.log"

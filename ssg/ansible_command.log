@@ -234,3 +234,46 @@ PLAY RECAP *********************************************************************
 
 
 ----------------------------------------
+
+--- 2025-08-21 14:36:45.942590 ---
+Команда: ansible-playbook -i /home/kuat.saparov/ansible/inventory /home/kuat.saparov/ansible/update_packages_test_ssg.yml --extra-vars 'ansible_sudo_pass=OJ*+t8YRTCn'
+Результат:
+
+PLAY [Update specific packages on AlmaLinux servers] ***************************
+
+TASK [Gathering Facts] *********************************************************
+fatal: [10.32.251.15]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.32.251.15 port 22: No route to host", "unreachable": true}
+fatal: [10.32.251.16]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.32.251.16 port 22: No route to host", "unreachable": true}
+fatal: [10.32.251.14]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.32.251.14 port 22: No route to host", "unreachable": true}
+fatal: [10.32.251.17]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.32.251.17 port 22: No route to host", "unreachable": true}
+fatal: [10.32.251.20]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.32.251.20 port 22: No route to host", "unreachable": true}
+fatal: [10.32.251.18]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.32.251.18 port 22: No route to host", "unreachable": true}
+fatal: [10.32.251.11]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: banner exchange: Connection to UNKNOWN port -1: No route to host", "unreachable": true}
+fatal: [10.32.251.19]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.32.251.19 port 22: No route to host", "unreachable": true}
+fatal: [10.32.251.29]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.32.251.29 port 22: No route to host", "unreachable": true}
+fatal: [10.32.251.28]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.32.251.28 port 22: No route to host", "unreachable": true}
+fatal: [10.32.251.25]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.32.251.25 port 22: No route to host", "unreachable": true}
+fatal: [10.32.251.30]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.32.251.30 port 22: No route to host", "unreachable": true}
+fatal: [10.32.251.13]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.32.251.13 port 22: Connection timed out", "unreachable": true}
+fatal: [10.32.251.33]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.32.251.33 port 22: No route to host", "unreachable": true}
+fatal: [10.32.251.31]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.32.251.31 port 22: No route to host", "unreachable": true}
+
+PLAY RECAP *********************************************************************
+10.32.251.11               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.13               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.14               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.15               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.16               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.17               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.18               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.19               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.20               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.25               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.28               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.29               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.30               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.31               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+10.32.251.33               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+----------------------------------------

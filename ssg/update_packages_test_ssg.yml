@@ -9,7 +9,7 @@
     - ATC
   vars:
     packages_to_update:
-      - tar
+      - krb5
   tasks:
     - name: Update specific packages to the latest version
       ansible.builtin.dnf:
